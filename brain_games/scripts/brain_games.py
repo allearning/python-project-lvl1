@@ -1,11 +1,11 @@
-#!../../.venv/usr/bin/ python3.8
-
-HELLO_MSG = "Welcome to the Brain Games!"
+#!/usr/bin/env python3
+"""Main script of the game."""
+from brain_games import cli
 
 
 def main():
-    print(HELLO_MSG)
+    cli.welcome_user()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
