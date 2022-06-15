@@ -2,3 +2,4 @@
 .github
 .vscode
 dist
+__pycache__
