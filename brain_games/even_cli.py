@@ -1,12 +1,10 @@
 """Command line funcionality."""
 import random
 
-import prompt
-
 from brain_games import cli
 
-HELLO_MSG = 'Welcome to the Brain Games!'
-CORRECT_STRING = 'Correct!'
+
+WELCOME = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 EVEN_MIN = 0
 EVEN_MAX = 1000
@@ -24,30 +22,14 @@ def is_even(int_: int) -> bool:
     return int_ % 2 == 0
 
 
-def welcome_even_game() -> str:
-    """Welcomes user for even-game.
-
-    Returns:
-        str: Player's name
-    """
-    name = cli.welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    return name
+def generate_question():
+    return str(random.randint(EVEN_MIN, EVEN_MAX))
 
 
-def ask_for_even(name) -> str:
+def get_correct_answer(input_data: str) -> str:
+    number = int(input_data)
     answers = {True: 'yes', False: 'no'}
-    number = random.randint(EVEN_MIN, EVEN_MAX)
-    print('Question:', str(number))
-    correct_answer = answers[is_even(number)]
-    answer = prompt.string('Your answer: ')
-    if answer == correct_answer:
-        print(CORRECT_STRING)
-        return True
-    print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-
-    print(f"Let's try again, {name}!")
-    return False
+    return answers[is_even(number)]
 
 
 def even_game(corrects_to_win: int) -> None:
@@ -56,10 +38,12 @@ def even_game(corrects_to_win: int) -> None:
     Args:
         corrects_to_win (int): correct answers to win
     """
-    name = welcome_even_game()
+    name = cli.welcome_user(WELCOME)
     wins = 0
-    while ask_for_even(name):
+    question = generate_question()
+    while cli.ask_question(question, get_correct_answer(question), name):
         wins += 1
+        question = generate_question()
         if wins == corrects_to_win:
-            print(f'Congratulations, {name}!')
+            cli.congrats(name)
             break

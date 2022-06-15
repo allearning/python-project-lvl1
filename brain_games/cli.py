@@ -2,10 +2,14 @@
 import prompt
 
 HELLO_MSG = 'Welcome to the Brain Games!'
+CORRECT_STRING = 'Correct!'
+ANSWER_STRING = 'Your answer: '
+CONGRATS_STRING = 'Congratulations'
 
 
-def welcome_user() -> str:
+def welcome_user(optional_part: str or None) -> str:
     """Welcomes user and asks his name.
+    Prints otional part after asking name and greeting
 
     Returns:
         str: player's name
@@ -13,4 +17,31 @@ def welcome_user() -> str:
     print(HELLO_MSG)
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
+    if optional_part is not None:
+        print(optional_part)
     return name
+
+
+def ask_question(question_text: str, correct_answer: str, name: str) -> bool:
+    """Asks a question and checks if answer is correct
+
+    Args:
+        question_text (str): question to ask
+        correct_answer (str): 
+        name (str): player name
+
+    Returns:
+        bool: True if answer is correct? False otherwise
+    """    
+    print(f"Question: {question_text}")
+    answer = prompt.string('Your answer: ')
+    if answer == correct_answer:
+        print(CORRECT_STRING)
+        return True
+    print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+    print(f"Let's try again, {name}!")
+    return False
+
+
+def congrats(name):
+    print(f'{CONGRATS_STRING}, {name}!')
