@@ -32,7 +32,7 @@ def get_correct_answer(input_data: str) -> str:
     return answers[is_even(number)]
 
 
-def even_game(corrects_to_win: int) -> None:
+def start_game(corrects_to_win: int) -> None:
     """Starts even game in cli.
 
     Args:

@@ -7,7 +7,7 @@ SUCCESS_TO_WIN = 3
 
 
 def main():
-    even_cli.even_game(SUCCESS_TO_WIN)
+    even_cli.start_game(SUCCESS_TO_WIN)
 
 
 if __name__ == '__main__':
