@@ -9,7 +9,9 @@ CONGRATS_STRING = 'Congratulations'
 
 def welcome_user(optional_part: str or None) -> str:
     """Welcomes user and asks his name.
-    Prints otional part after asking name and greeting
+
+    Args:
+       optional_part (strorNone): additional welcome-string
 
     Returns:
         str: player's name
@@ -23,17 +25,17 @@ def welcome_user(optional_part: str or None) -> str:
 
 
 def ask_question(question_text: str, correct_answer: str, name: str) -> bool:
-    """Asks a question and checks if answer is correct
+    """Asks a question and checks if answer is correct.
 
     Args:
         question_text (str): question to ask
-        correct_answer (str): 
+        correct_answer (str): correct answer
         name (str): player name
 
     Returns:
-        bool: True if answer is correct? False otherwise
-    """    
-    print(f"Question: {question_text}")
+        bool: True if answer is correct, False otherwise
+    """
+    print(f'Question: {question_text}')
     answer = prompt.string('Your answer: ')
     if answer == correct_answer:
         print(CORRECT_STRING)

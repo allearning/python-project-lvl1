@@ -3,7 +3,6 @@ import random
 
 from brain_games import cli
 
-
 WELCOME = 'What is the result of the expression?'
 
 MIN = 0

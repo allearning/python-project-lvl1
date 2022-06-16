@@ -3,7 +3,6 @@ import random
 
 from brain_games import cli
 
-
 WELCOME = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 EVEN_MIN = 0
