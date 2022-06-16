@@ -9,3 +9,6 @@
 
 ## brain-valv
 [![asciicast](https://asciinema.org/a/rZTgcHPiKXtLeeUmEloUzPmnK.svg)](https://asciinema.org/a/rZTgcHPiKXtLeeUmEloUzPmnK)
+
+## brain-gcd
+[![asciicast](https://asciinema.org/a/5IXnhBV1Cf4H6l53nekYNJtRB.svg)](https://asciinema.org/a/5IXnhBV1Cf4H6l53nekYNJtRB)
