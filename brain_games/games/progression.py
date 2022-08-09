@@ -10,11 +10,13 @@ HIDDEN_SIGN = '..'
 
 MIN = 0
 MAX = 20
+MIN_STEP = 1
+MAX_STEP = 20
 
 
 def generate_question():
     start = random.randint(MIN, MAX)
-    step = random.randint(MIN, MAX)
+    step = random.randint(MIN_STEP, MAX_STEP)
     progression = list(range(
         start,
         start + step * PROGRESSION_LENGHT + 1,
