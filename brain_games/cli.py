@@ -2,9 +2,6 @@
 import prompt
 
 HELLO_MSG = 'Welcome to the Brain Games!'
-CORRECT_STRING = 'Correct!'
-ANSWER_STRING = 'Your answer: '
-CONGRATS_STRING = 'Congratulations'
 
 
 def welcome_user(optional_part: str or None) -> str:
