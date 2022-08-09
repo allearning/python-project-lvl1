@@ -1,7 +1,7 @@
 """Command line funcionality."""
 import prompt
 
-HELLO_MSG = 'Welcome to the Brain Games!'
+HELLO_MSG = 'Welcome to the Brain Games!!!!!!!!!!!!!'
 
 
 def welcome_user(optional_part: str or None) -> str:
