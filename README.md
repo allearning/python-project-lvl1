@@ -7,3 +7,6 @@
 # Доступные игры
 ## brain-even
 [![asciicast](https://asciinema.org/a/10zPOCpU6dEyGE2lvgqJMLSji.svg)](https://asciinema.org/a/10zPOCpU6dEyGE2lvgqJMLSji)
+
+## brain-calc
+[![asciicast](https://asciinema.org/a/rZTgcHPiKXtLeeUmEloUzPmnK.svg)](https://asciinema.org/a/rZTgcHPiKXtLeeUmEloUzPmnK)
