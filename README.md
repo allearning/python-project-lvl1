@@ -3,3 +3,7 @@
 
 ### Maintainability
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+
+# Доступные игры
+## brain-even
+[![asciicast](https://asciinema.org/a/10zPOCpU6dEyGE2lvgqJMLSji.svg)](https://asciinema.org/a/10zPOCpU6dEyGE2lvgqJMLSji)
